@@ -1,0 +1,130 @@
+/* Report & Analytics - MG (Figma 116:2611) */
+.mgr-content:has(.mgr-report) {
+  background: #f8f9fa;
+  padding-top: 16px;
+}
+
+.mgr-report {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 1086px;
+}
+
+.mgr-report__filters {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+  min-height: 86px;
+}
+
+.mgr-report__field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 193px;
+}
+
+.mgr-report__label {
+  padding: 0 4px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #44474c;
+}
+
+.mgr-report__select-wrap {
+  position: relative;
+}
+
+.mgr-report__select {
+  appearance: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px 40px 9px 17px;
+  border: 1px solid #c5c6cc;
+  border-radius: 8px;
+  background: #fbf9fa;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  color: #1b1b1d;
+  outline: none;
+  cursor: pointer;
+}
+
+.mgr-report__select:focus {
+  border-color: #2463eb;
+}
+
+.mgr-report__select-wrap > img {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.mgr-report__metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 720px;
+}
+
+.mgr-report__card {
+  background: #ffffff;
+  border: 1px solid #c5c6cc;
+  border-radius: 8px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 149px;
+  box-sizing: border-box;
+}
+
+.mgr-report__card-label {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  color: #44474c;
+}
+
+.mgr-report__card-value {
+  margin: 12px 0 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.64px;
+  color: #1b1b1d;
+}
+
+@media (max-width: 700px) {
+  .mgr-report__field {
+    width: 100%;
+  }
+
+  .mgr-report__metrics {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+
+  .mgr-report__card-value {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}

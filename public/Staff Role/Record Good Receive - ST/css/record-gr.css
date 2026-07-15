@@ -1,0 +1,180 @@
+/* Record Good Receive - ST */
+:root {
+  --rgr-blue: #2463eb;
+  --rgr-heading: #0f172a;
+  --rgr-label: #475569;
+  --rgr-muted: #94a3b8;
+  --rgr-border: #e2e8f0;
+  --rgr-page: #f8f9fa;
+}
+
+.staff-content:has(.record-gr) {
+  background: var(--rgr-page);
+  padding-top: 8px;
+}
+
+.record-gr {
+  background: #ffffff;
+  border: 1px solid var(--rgr-border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  max-width: 980px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-top: none;
+}
+
+.record-gr__intro {
+  border-top: 1px solid var(--rgr-border);
+  padding-top: 20px;
+}
+
+.record-gr__title {
+  margin: 0 0 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--rgr-heading);
+}
+
+.record-gr__subtitle {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  color: var(--rgr-muted);
+  max-width: 640px;
+  line-height: 1.5;
+}
+
+.record-gr__form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.record-gr__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.record-gr__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.record-gr__label {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--rgr-label);
+}
+
+.record-gr__input,
+.record-gr__select,
+.record-gr__textarea {
+  width: 100%;
+  border: 1px solid var(--rgr-border);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--rgr-heading);
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  outline: none;
+}
+
+.record-gr__input,
+.record-gr__select {
+  height: 44px;
+  padding: 0 14px;
+}
+
+.record-gr__select {
+  appearance: none;
+  color: var(--rgr-muted);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%2394a3b8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.record-gr__select:valid {
+  color: var(--rgr-heading);
+}
+
+.record-gr__textarea {
+  min-height: 120px;
+  padding: 12px 14px;
+  resize: vertical;
+}
+
+.record-gr__textarea::placeholder {
+  color: var(--rgr-muted);
+}
+
+.record-gr__input:focus,
+.record-gr__select:focus,
+.record-gr__textarea:focus {
+  border-color: var(--rgr-blue);
+  box-shadow: 0 0 0 3px rgba(36, 99, 235, 0.12);
+}
+
+.record-gr__actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+}
+
+.record-gr__cancel {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--rgr-heading);
+  text-decoration: none;
+}
+
+.record-gr__cancel:hover {
+  color: var(--rgr-blue);
+}
+
+.record-gr__submit {
+  appearance: none;
+  border: none;
+  height: 44px;
+  padding: 0 22px;
+  border-radius: 8px;
+  background: var(--rgr-blue);
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(36, 99, 235, 0.25);
+}
+
+.record-gr__submit:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 900px) {
+  .record-gr {
+    padding: 20px 16px;
+  }
+
+  .record-gr__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .record-gr__actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .record-gr__submit {
+    width: 100%;
+  }
+}

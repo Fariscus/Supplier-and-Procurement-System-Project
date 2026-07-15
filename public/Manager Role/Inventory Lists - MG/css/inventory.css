@@ -1,0 +1,255 @@
+/* Inventory Lists - MG (Figma 127:5944) */
+.mgr-content:has(.mgr-inv) {
+  background: #f8f9fa;
+  padding-top: 8px;
+}
+
+.mgr-inv {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1100px;
+}
+
+.mgr-inv__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mgr-inv__title {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #05101d;
+}
+
+.mgr-inv__subtitle {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.mgr-inv__kpis {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.mgr-inv__kpi {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+.mgr-inv__kpi-label {
+  margin: 0 0 8px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.mgr-inv__kpi-value {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #05101d;
+}
+
+.mgr-inv__card {
+  background: #ffffff;
+  border: 1px solid #c5c6cc;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mgr-inv__table-wrap {
+  overflow-x: auto;
+}
+
+.mgr-inv__table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+.mgr-inv__table th,
+.mgr-inv__table td {
+  text-align: left;
+  padding: 16px 24px;
+  font-size: 14px;
+  border-bottom: 1px solid #c5c6cc;
+}
+
+.mgr-inv__table thead th {
+  background: #f8fafc;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #44474c;
+}
+
+.mgr-inv__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.mgr-inv__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mgr-inv__item-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: #f0edee;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.mgr-inv__item-icon img {
+  width: 24px;
+  height: 18px;
+  object-fit: contain;
+  display: block;
+}
+
+.mgr-inv__item-name {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #05101d;
+}
+
+.mgr-inv__item-desc {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 14px;
+  color: #44474c;
+}
+
+.mgr-inv__qty {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1b1b1d;
+  text-align: right;
+}
+
+.mgr-inv__updated {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  color: #44474c;
+}
+
+.mgr-inv__more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.mgr-inv__more:hover {
+  background: #f1f5f9;
+}
+
+.mgr-inv__more img {
+  width: 4px;
+  height: 16px;
+  display: block;
+}
+
+.mgr-inv__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 16px 24px;
+  border-top: 1px solid #c5c6cc;
+  background: #f6f3f4;
+}
+
+.mgr-inv__count {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  color: #44474c;
+}
+
+.mgr-inv__pager {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mgr-inv__page {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 41px;
+  height: 37px;
+  padding: 0 9px;
+  border-radius: 4px;
+  border: 1px solid #c5c6cc;
+  background: #ffffff;
+  color: #1b1b1d;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.mgr-inv__page.is-active {
+  background: #1a2533;
+  border-color: #c5c6cc;
+  color: #ffffff;
+}
+
+.mgr-inv__page.is-disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.mgr-inv__page--icon img {
+  width: 8px;
+  height: 12px;
+  display: block;
+}
+
+.mgr-inv__ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  color: #64748b;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 12px;
+}
+
+@media (max-width: 800px) {
+  .mgr-inv__kpis {
+    grid-template-columns: 1fr;
+  }
+}

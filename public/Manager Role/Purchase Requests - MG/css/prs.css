@@ -1,0 +1,145 @@
+/* Purchase Requests - MG */
+.mgr-content:has(.mgr-prs) {
+  background: #ffffff;
+  padding-top: 8px;
+}
+
+.mgr-prs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mgr-prs__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 20px;
+}
+
+.mgr-prs__filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mgr-prs__filter {
+  appearance: none;
+  border: 1.5px solid #1a1a1a;
+  background: #ffffff;
+  color: #1a1a1a;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  height: 36px;
+  padding: 0 18px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.mgr-prs__filter.is-active {
+  background: rgba(0, 176, 116, 0.15);
+  border-color: transparent;
+  color: #00b074;
+  font-weight: 700;
+}
+
+.mgr-prs__search-input {
+  width: min(280px, 100%);
+  height: 40px;
+  padding: 0 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  outline: none;
+}
+
+.mgr-prs__search-input:focus {
+  border-color: #00b074;
+}
+
+.mgr-prs__table-wrap {
+  overflow-x: auto;
+}
+
+.mgr-prs__table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 960px;
+}
+
+.mgr-prs__table th,
+.mgr-prs__table td {
+  text-align: left;
+  padding: 16px 12px;
+  font-size: 14px;
+}
+
+.mgr-prs__table thead th {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #0f172a;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mgr-prs__table tbody td {
+  font-family: "Hanken Grotesk", sans-serif;
+  color: #334155;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mgr-prs__id {
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.mgr-prs__status {
+  font-weight: 600;
+}
+
+.mgr-prs__status--pending { color: #f59e0b; }
+.mgr-prs__status--approved { color: #00b074; }
+.mgr-prs__status--rejected { color: #ef4444; }
+
+.mgr-prs__decision-by,
+.mgr-prs__decision-date {
+  white-space: nowrap;
+}
+
+.mgr-prs__action {
+  text-align: right;
+}
+
+.mgr-prs__view {
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.mgr-prs__view:hover {
+  color: #00b074;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 700px) {
+  .mgr-prs__search-input {
+    width: 100%;
+  }
+}

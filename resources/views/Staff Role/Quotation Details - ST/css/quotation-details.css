@@ -1,0 +1,145 @@
+/* Quotation Details - ST */
+:root {
+  --qd-heading: #0f172a;
+  --qd-text: #334155;
+  --qd-muted: #64748b;
+  --qd-border: #e2e8f0;
+  --qd-blue: #2463eb;
+  --qd-blue-soft: #dbeafe;
+  --qd-page: #f8f9fa;
+}
+
+.staff-content:has(.quotation-details) {
+  background: var(--qd-page);
+  padding-top: 8px;
+}
+
+.quotation-details {
+  background: #ffffff;
+  border: 1px solid var(--qd-border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  max-width: 980px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.quotation-details__body {
+  border-top: 1px solid #1a1a1a;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.quotation-details__edit {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 6px;
+  background: var(--qd-blue-soft);
+  color: var(--qd-blue);
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.quotation-details__edit:hover {
+  background: #bfdbfe;
+}
+
+.quotation-details__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 48px;
+  max-width: 720px;
+}
+
+.quotation-details__item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.quotation-details__label {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--qd-muted);
+}
+
+.quotation-details__value {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--qd-heading);
+}
+
+.quotation-details__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.quotation-details__table th,
+.quotation-details__table td {
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 14px;
+}
+
+.quotation-details__table thead th {
+  background: #f1f5f9;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: var(--qd-heading);
+  border-bottom: 1px solid var(--qd-border);
+}
+
+.quotation-details__table tbody td {
+  font-family: "Hanken Grotesk", sans-serif;
+  color: var(--qd-text);
+  border-bottom: 1px solid var(--qd-border);
+}
+
+.quotation-details__notes-title {
+  margin: 0 0 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--qd-heading);
+}
+
+.quotation-details__notes-box {
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--qd-border);
+  border-radius: 10px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  color: var(--qd-text);
+  line-height: 1.5;
+}
+
+.quotation-details__header-id {
+  margin-left: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  .quotation-details {
+    padding: 20px 16px;
+  }
+
+  .quotation-details__grid {
+    grid-template-columns: 1fr;
+  }
+}

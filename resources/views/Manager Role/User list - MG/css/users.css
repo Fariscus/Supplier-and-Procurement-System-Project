@@ -1,0 +1,337 @@
+/* User list - MG (Figma 5:36) */
+.mgr-content:has(.mgr-users) {
+  background: #f8f9fa;
+  padding-top: 8px;
+}
+
+.mgr-users {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.mgr-users__intro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.mgr-users__title {
+  margin: 0 0 6px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #05101d;
+}
+
+.mgr-users__subtitle {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.mgr-users__add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 24px;
+  border-radius: 4px;
+  background: #2463eb;
+  color: #ffffff;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.mgr-users__add:hover {
+  background: #1d4ed8;
+}
+
+.mgr-users__filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(180px, 0.6fr);
+  gap: 16px;
+  align-items: end;
+}
+
+.mgr-users__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.mgr-users__label {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #44474c;
+}
+
+.mgr-users__search,
+.mgr-users__select-wrap {
+  position: relative;
+}
+
+.mgr-users__input,
+.mgr-users__select {
+  width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+  border: 1px solid #c5c6cc;
+  border-radius: 4px;
+  background: #ffffff;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  color: #1b1b1d;
+  outline: none;
+}
+
+.mgr-users__input {
+  padding: 0 42px 0 14px;
+}
+
+.mgr-users__input::placeholder {
+  color: #9ca3af;
+}
+
+.mgr-users__search > img {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.mgr-users__select {
+  appearance: none;
+  padding: 0 36px 0 14px;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.mgr-users__select-wrap > img {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.mgr-users__card {
+  background: #ffffff;
+  border: 1px solid #c5c6cc;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mgr-users__card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 24px;
+  border-bottom: 1px solid #c5c6cc;
+}
+
+.mgr-users__card-title {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #05101d;
+}
+
+.mgr-users__total {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  color: #374151;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+.mgr-users__table-wrap {
+  overflow-x: auto;
+}
+
+.mgr-users__table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 780px;
+}
+
+.mgr-users__table th,
+.mgr-users__table td {
+  text-align: left;
+  padding: 18px 24px;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(197, 198, 204, 0.5);
+  vertical-align: middle;
+}
+
+.mgr-users__table thead th {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #44474c;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #c5c6cc;
+}
+
+.mgr-users__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.mgr-users__table tbody td {
+  font-family: "Hanken Grotesk", sans-serif;
+  color: #1b1b1d;
+}
+
+.mgr-users__person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mgr-users__avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #dbeafe;
+  color: #1e40af;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.mgr-users__name {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  color: #1b1b1d;
+}
+
+.mgr-users__email {
+  color: #05101d;
+  text-decoration: none;
+}
+
+.mgr-users__email:hover {
+  color: #2463eb;
+  text-decoration: underline;
+}
+
+.mgr-users__role {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.mgr-users__role--staff {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.mgr-users__role--manager {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.mgr-users__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 16px 24px;
+  border-top: 1px solid #c5c6cc;
+  background: #ffffff;
+}
+
+.mgr-users__count {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.mgr-users__pager {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mgr-users__page {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 8px;
+  border-radius: 4px;
+  border: 1px solid #c5c6cc;
+  background: #ffffff;
+  color: #1b1b1d;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.mgr-users__page.is-active {
+  background: #1a2533;
+  border-color: #1a2533;
+  color: #ffffff;
+}
+
+.mgr-users__page.is-disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.mgr-users__page--icon img {
+  width: 8px;
+  height: 12px;
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .mgr-users__filters {
+    grid-template-columns: 1fr;
+  }
+
+  .mgr-users__add {
+    width: 100%;
+  }
+}

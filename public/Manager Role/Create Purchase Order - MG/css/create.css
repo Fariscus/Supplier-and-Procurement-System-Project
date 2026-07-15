@@ -1,0 +1,385 @@
+/* Create Purchase Order - MG (Figma 111:2929) */
+.mgr-content:has(.mgr-po-create) {
+  background: #f8f9fa;
+  padding-top: 8px;
+}
+
+.mgr-po-create {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 0 32px;
+}
+
+.mgr-po-create__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mgr-po-create__title {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.64px;
+  color: #1b1b1d;
+}
+
+.mgr-po-create__subtitle {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #44474c;
+}
+
+.mgr-po-create__card {
+  background: #ffffff;
+  border: 1px solid #c5c6cc;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.mgr-po-create__card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px;
+  background: #f0edee;
+  border-bottom: 1px solid #c5c6cc;
+}
+
+.mgr-po-create__card-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mgr-po-create__card-icon {
+  display: inline-flex;
+  width: 18px;
+  height: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.mgr-po-create__card-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.mgr-po-create__card-title {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1b1b1d;
+}
+
+.mgr-po-create__draft {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 13px;
+  border-radius: 12px;
+  border: 1px solid rgba(5, 16, 29, 0.1);
+  background: rgba(5, 16, 29, 0.05);
+  color: #05101d;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.mgr-po-create__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+}
+
+.mgr-po-create__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.mgr-po-create__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.mgr-po-create__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  line-height: 16px;
+  color: #44474c;
+}
+
+.mgr-po-create__req {
+  color: #ba1a1a;
+}
+
+.mgr-po-create__select-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.mgr-po-create__input,
+.mgr-po-create__select {
+  width: 100%;
+  height: 48px;
+  padding: 0 17px;
+  border: 1px solid #c5c6cc;
+  border-radius: 4px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1b1b1d;
+  background: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.mgr-po-create__select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.mgr-po-create__chevron {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 7.4px;
+  pointer-events: none;
+}
+
+.mgr-po-create__readonly {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 51px;
+  padding: 0 17px;
+  border: 1px solid #c5c6cc;
+  border-radius: 4px;
+  background: #f6f3f4;
+  box-sizing: border-box;
+}
+
+.mgr-po-create__readonly img {
+  width: 12px;
+  height: 11px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.mgr-po-create__readonly .mgr-po-create__input {
+  height: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #44474c;
+}
+
+.mgr-po-create__input.is-readonly {
+  color: #44474c;
+}
+
+.mgr-po-create__hint {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 14px;
+  color: rgba(68, 71, 76, 0.6);
+}
+
+.mgr-po-create__total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 74px;
+  padding: 17px;
+  border-radius: 8px;
+  border: 1px solid rgba(213, 227, 253, 0.5);
+  background: rgba(213, 227, 253, 0.3);
+  box-sizing: border-box;
+}
+
+.mgr-po-create__total-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.mgr-po-create__total-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #d5e3fd;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.mgr-po-create__total-icon img {
+  width: 22px;
+  height: 16px;
+  display: block;
+  object-fit: contain;
+}
+
+.mgr-po-create__total-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+}
+
+.mgr-po-create__total-label {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.55px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #3a485c;
+}
+
+.mgr-po-create__total-value {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #0d1c2f;
+}
+
+.mgr-po-create__total-note {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 14px;
+  color: #3a485c;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.mgr-po-create__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  padding-top: 25px;
+  border-top: 1px solid #c5c6cc;
+}
+
+.mgr-po-create__cancel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 25px;
+  border-radius: 8px;
+  border: 1px solid #c5c6cc;
+  background: #ffffff;
+  color: #1b1b1d;
+  text-decoration: none;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  line-height: 16px;
+  box-sizing: border-box;
+}
+
+.mgr-po-create__cancel:hover {
+  background: #f8f9fa;
+}
+
+.mgr-po-create__submit {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 8px;
+  background: #2463eb;
+  color: #ffffff;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  line-height: 16px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.mgr-po-create__submit img {
+  width: 12px;
+  height: 12px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.mgr-po-create__submit:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 800px) {
+  .mgr-po-create__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mgr-po-create__card-head {
+    flex-wrap: wrap;
+  }
+
+  .mgr-po-create__total {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mgr-po-create__total-note {
+    text-align: left;
+    white-space: normal;
+  }
+
+  .mgr-po-create__actions {
+    flex-direction: column-reverse;
+  }
+
+  .mgr-po-create__cancel,
+  .mgr-po-create__submit {
+    width: 100%;
+  }
+}

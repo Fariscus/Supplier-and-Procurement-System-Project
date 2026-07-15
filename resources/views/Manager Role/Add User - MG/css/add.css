@@ -1,0 +1,166 @@
+/* Add User - MG (Figma 5:38) */
+.mgr-content:has(.mgr-add-user) {
+  background: #ffffff;
+  padding-top: 24px;
+}
+
+.mgr-add-user {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  max-width: 928px;
+}
+
+.mgr-add-user__title {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  color: #000000;
+}
+
+.mgr-add-user__form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.mgr-add-user__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.mgr-add-user__field--role {
+  max-width: 160px;
+}
+
+.mgr-add-user__label {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 13.6px;
+  line-height: 20.4px;
+  color: #000000;
+}
+
+.mgr-add-user__input,
+.mgr-add-user__select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #6b7280;
+  border-radius: 0;
+  background: #ffffff;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  color: #000000;
+  outline: none;
+}
+
+.mgr-add-user__input {
+  padding: 10px 13px 11px;
+}
+
+.mgr-add-user__input--role {
+  font-size: 12px;
+  padding: 9px 13px;
+}
+
+.mgr-add-user__input::placeholder {
+  color: #6b7280;
+}
+
+.mgr-add-user__select-wrap {
+  position: relative;
+}
+
+.mgr-add-user__select {
+  appearance: none;
+  padding: 9px 36px 9px 13px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.mgr-add-user__select:invalid,
+.mgr-add-user__select option[value=""] {
+  color: #6b7280;
+}
+
+.mgr-add-user__select-wrap > img {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.mgr-add-user__actions {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-top: 40px;
+  flex-wrap: wrap;
+}
+
+.mgr-add-user__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 280px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mgr-add-user__btn--save {
+  appearance: none;
+  border: none;
+  padding: 16px 24px;
+  background: #2463eb;
+  color: #ffffff;
+}
+
+.mgr-add-user__btn--save:hover {
+  background: #1d4ed8;
+}
+
+.mgr-add-user__btn--cancel {
+  padding: 16px 24px;
+  border: 2px solid #1e293b;
+  background: #ffffff;
+  color: #1e293b;
+}
+
+.mgr-add-user__btn--cancel:hover {
+  background: #f8f9fa;
+}
+
+@media (max-width: 700px) {
+  .mgr-add-user__title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .mgr-add-user__field--role {
+    max-width: none;
+  }
+
+  .mgr-add-user__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .mgr-add-user__btn {
+    min-width: 0;
+    width: 100%;
+  }
+}

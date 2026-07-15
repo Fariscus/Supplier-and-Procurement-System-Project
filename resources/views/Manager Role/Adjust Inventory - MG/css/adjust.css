@@ -1,0 +1,238 @@
+/* Adjust Inventory - MG (Figma 116:1947) */
+.mgr-content:has(.mgr-adj) {
+  background: #f8f9fa;
+  padding-top: 8px;
+}
+
+.mgr-adj {
+  max-width: 1055px;
+}
+
+.mgr-adj__card {
+  background: #ffffff;
+  border: 1px solid #c5c6cc;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.mgr-adj__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 32px 25px;
+  border-bottom: 1px solid #c5c6cc;
+}
+
+.mgr-adj__title {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.24px;
+  color: #05101d;
+}
+
+.mgr-adj__subtitle {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #44474c;
+}
+
+.mgr-adj__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  background: #d5e3fd;
+  color: #57657b;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 14px;
+  white-space: nowrap;
+}
+
+.mgr-adj__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+}
+
+.mgr-adj__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.mgr-adj__field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.mgr-adj__label {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  line-height: 16px;
+  color: #44474c;
+}
+
+.mgr-adj__readonly,
+.mgr-adj__qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 17px;
+  border: 1px solid #c5c6cc;
+  border-radius: 4px;
+  background: #f6f3f4;
+  box-sizing: border-box;
+}
+
+.mgr-adj__qty {
+  justify-content: space-between;
+}
+
+.mgr-adj__readonly img {
+  width: 19px;
+  height: 20px;
+  flex-shrink: 0;
+  display: block;
+  object-fit: contain;
+}
+
+.mgr-adj__input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1b1b1d;
+  outline: none;
+}
+
+.mgr-adj__units {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 14px;
+  color: #44474c;
+  flex-shrink: 0;
+}
+
+.mgr-adj__alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 17px;
+  border-radius: 8px;
+  border: 1px solid #d5e3fd;
+  background: rgba(213, 227, 253, 0.3);
+}
+
+.mgr-adj__alert img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.mgr-adj__alert p {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #3a485c;
+}
+
+.mgr-adj__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  padding: 25px 32px 24px;
+  border-top: 1px solid #c5c6cc;
+  background: rgba(246, 243, 244, 0.5);
+}
+
+.mgr-adj__cancel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 25px;
+  border-radius: 8px;
+  border: 1px solid #c5c6cc;
+  background: #ffffff;
+  color: #1b1b1d;
+  text-decoration: none;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  line-height: 16px;
+}
+
+.mgr-adj__cancel:hover {
+  background: #f8f9fa;
+}
+
+.mgr-adj__submit {
+  appearance: none;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 8px;
+  background: #2463eb;
+  color: #ffffff;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  line-height: 16px;
+  cursor: pointer;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.mgr-adj__submit:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 800px) {
+  .mgr-adj__head,
+  .mgr-adj__body,
+  .mgr-adj__footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .mgr-adj__head {
+    flex-wrap: wrap;
+  }
+
+  .mgr-adj__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mgr-adj__footer {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .mgr-adj__submit {
+    width: 100%;
+  }
+}

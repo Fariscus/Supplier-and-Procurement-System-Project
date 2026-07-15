@@ -1,0 +1,113 @@
+/* Quotation Lists - MG (Figma 113:1565) */
+.mgr-content:has(.mgr-ql) {
+  background: #ffffff;
+  padding-top: 8px;
+}
+
+.mgr-ql {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mgr-ql__toolbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  border-top: 1px solid #1a1a1a;
+  padding-top: 20px;
+}
+
+.mgr-ql__filter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mgr-ql__filter-label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #0f172a;
+}
+
+.mgr-ql__select {
+  appearance: none;
+  min-width: 160px;
+  height: 40px;
+  padding: 0 36px 0 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #f1f5f9
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%2364748b' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    no-repeat right 12px center;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  color: #0f172a;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  outline: none;
+}
+
+.mgr-ql__table-wrap {
+  overflow-x: auto;
+}
+
+.mgr-ql__table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.mgr-ql__table th,
+.mgr-ql__table td {
+  text-align: left;
+  padding: 16px 12px;
+  font-size: 14px;
+}
+
+.mgr-ql__table thead th {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #0f172a;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mgr-ql__table tbody td {
+  font-family: "Hanken Grotesk", sans-serif;
+  color: #334155;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mgr-ql__id {
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.mgr-ql__action {
+  text-align: right;
+}
+
+.mgr-ql__view {
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.mgr-ql__view:hover {
+  color: #00b074;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

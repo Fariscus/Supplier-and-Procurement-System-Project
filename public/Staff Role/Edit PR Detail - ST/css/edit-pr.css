@@ -1,0 +1,45 @@
+/* Edit PR Detail - ST — overrides on top of create-pr.css */
+.staff-content:has(.edit-pr) {
+  background: #f8f9fa;
+  padding-top: 8px;
+}
+
+.edit-pr__form {
+  gap: 24px;
+}
+
+.edit-pr__ref {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.edit-pr__cancel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 22px;
+  border-radius: 8px;
+  border: 1.5px solid #1a1a1a;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.edit-pr__cancel:hover {
+  background: #f8fafc;
+}
+
+@media (max-width: 800px) {
+  .edit-pr__cancel {
+    width: 100%;
+  }
+}

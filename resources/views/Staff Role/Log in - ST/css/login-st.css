@@ -1,0 +1,184 @@
+/* Log in - ST — tokens from Figma node 127:2435 */
+.login-st {
+  --sps-heading: #043133;
+  --sps-label: #4d5959;
+  --sps-placeholder: #838383;
+  --sps-input-bg: #eff0f2;
+  --sps-button: #2463eb;
+  --sps-white: #ffffff;
+  --sps-error: #dc2626;
+
+  display: grid;
+  grid-template-columns: minmax(280px, 658fr) minmax(320px, 782fr);
+  width: 100%;
+  min-height: 100vh;
+  background: var(--sps-white);
+  font-family: "Poppins", sans-serif;
+}
+
+.login-st__brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sps-white);
+  padding: 48px 32px;
+}
+
+.login-st__logo-wrap {
+  width: min(397px, 100%);
+  aspect-ratio: 397 / 529;
+  overflow: clip;
+}
+
+.login-st__logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.login-st__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--sps-white);
+  padding: 64px 91px;
+}
+
+.login-st__title {
+  color: var(--sps-heading);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: normal;
+  white-space: nowrap;
+  margin: 0 0 46px;
+}
+
+.login-st__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  gap: 46px;
+}
+
+.login-st__field {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.login-st__label {
+  color: var(--sps-label);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.login-st__input {
+  width: 100%;
+  height: 65px;
+  border: none;
+  outline: none;
+  background: var(--sps-input-bg);
+  color: var(--sps-heading);
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0 29px;
+}
+
+.login-st__input::placeholder {
+  color: var(--sps-placeholder);
+}
+
+.login-st__input:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--sps-button);
+}
+
+.login-st__input.is-invalid {
+  box-shadow: inset 0 0 0 2px var(--sps-error);
+}
+
+.login-st__error {
+  color: var(--sps-error);
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: -6px;
+}
+
+.login-st__actions {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.login-st__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 60px;
+  border: none;
+  background: var(--sps-button);
+  color: var(--sps-white);
+  font-family: inherit;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+
+.login-st__submit:hover {
+  filter: brightness(1.05);
+}
+
+.login-st__submit:active {
+  transform: translateY(1px);
+}
+
+.login-st__submit:focus-visible {
+  outline: 2px solid var(--sps-heading);
+  outline-offset: 3px;
+}
+
+@media (max-width: 1024px) {
+  .login-st {
+    grid-template-columns: 1fr;
+  }
+
+  .login-st__brand {
+    padding: 40px 24px 8px;
+  }
+
+  .login-st__logo-wrap {
+    width: min(280px, 70vw);
+  }
+
+  .login-st__content {
+    padding: 32px 24px 64px;
+    align-items: center;
+  }
+
+  .login-st__title {
+    font-size: clamp(28px, 6vw, 40px);
+    white-space: normal;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .login-st__form {
+    gap: 28px;
+  }
+
+  .login-st__actions {
+    padding-top: 8px;
+  }
+
+  .login-st__submit {
+    width: 100%;
+    max-width: 300px;
+  }
+}

@@ -1,0 +1,189 @@
+/* Approve Reject PR - MG */
+.mgr-review__header-id {
+  margin-left: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mgr-review {
+  max-width: 980px;
+}
+
+.mgr-review__card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  border-top: 1px solid #1a1a1a;
+  margin-top: 4px;
+  padding-top: 24px;
+}
+
+.mgr-review__ref {
+  margin: 0 0 4px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.mgr-review__title {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #0f172a;
+}
+
+.mgr-review__meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 40px;
+  max-width: 640px;
+}
+
+.mgr-review__meta-item,
+.mgr-review__section,
+.mgr-review__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mgr-review__label {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.mgr-review__value {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #0f172a;
+}
+
+.mgr-review__dates {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.mgr-review__input,
+.mgr-review__textarea {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  outline: none;
+}
+
+.mgr-review__input {
+  height: 44px;
+  padding: 0 14px;
+}
+
+.mgr-review__textarea {
+  min-height: 110px;
+  padding: 12px 14px;
+  resize: vertical;
+}
+
+.mgr-review__textarea::placeholder {
+  color: #94a3b8;
+}
+
+.mgr-review__input:focus,
+.mgr-review__textarea:focus {
+  border-color: #2463eb;
+  box-shadow: 0 0 0 3px rgba(36, 99, 235, 0.12);
+}
+
+.mgr-review__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mgr-review__table th,
+.mgr-review__table td {
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 14px;
+}
+
+.mgr-review__table thead th {
+  background: #f1f5f9;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #0f172a;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mgr-review__table tbody td {
+  font-family: "Hanken Grotesk", sans-serif;
+  color: #334155;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mgr-review__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.mgr-review__approve,
+.mgr-review__reject {
+  appearance: none;
+  height: 44px;
+  padding: 0 22px;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.mgr-review__approve {
+  border: none;
+  background: #2463eb;
+  color: #ffffff;
+}
+
+.mgr-review__approve:hover {
+  background: #1d4ed8;
+}
+
+.mgr-review__reject {
+  border: 1.5px solid #ef4444;
+  background: #ffffff;
+  color: #ef4444;
+}
+
+.mgr-review__reject:hover {
+  background: #fef2f2;
+}
+
+@media (max-width: 800px) {
+  .mgr-review__meta,
+  .mgr-review__dates {
+    grid-template-columns: 1fr;
+  }
+
+  .mgr-review__actions {
+    flex-direction: column-reverse;
+  }
+
+  .mgr-review__approve,
+  .mgr-review__reject {
+    width: 100%;
+  }
+}

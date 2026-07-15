@@ -1,0 +1,232 @@
+/* Purchase Order List - MG (Figma 111:1508) */
+.mgr-content:has(.mgr-po-list) {
+  background: #f8f9fa;
+  padding-top: 8px;
+}
+
+.mgr-po-list {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mgr-po-list__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.mgr-po-list__title {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #05101d;
+}
+
+.mgr-po-list__create {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: #2463eb;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+}
+
+.mgr-po-list__create:hover {
+  background: #1d4ed8;
+}
+
+.mgr-po-list__table-wrap {
+  overflow-x: auto;
+}
+
+.mgr-po-list__table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.mgr-po-list__table th,
+.mgr-po-list__table td {
+  text-align: left;
+  padding: 16px 12px;
+  font-size: 14px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mgr-po-list__table thead th {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.mgr-po-list__th-sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mgr-po-list__table tbody td {
+  font-family: "Hanken Grotesk", sans-serif;
+  color: #334155;
+}
+
+.mgr-po-list__id {
+  font-weight: 600;
+  color: #05101d;
+}
+
+.mgr-po-list__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.mgr-po-list__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.mgr-po-list__status--ordered {
+  background: #d5e3fd;
+  color: #57657b;
+}
+.mgr-po-list__status--ordered .mgr-po-list__dot { background: #05101d; }
+
+.mgr-po-list__status--received {
+  background: #f9dfbd;
+  color: #261905;
+}
+.mgr-po-list__status--received .mgr-po-list__dot { background: #180d00; }
+
+.mgr-po-list__status--pending {
+  background: #ffdad6;
+  color: #93000a;
+}
+.mgr-po-list__status--pending .mgr-po-list__dot { background: #ba1a1a; }
+
+.mgr-po-list__actions {
+  text-align: center;
+}
+
+.mgr-po-list__menu {
+  position: relative;
+  display: inline-block;
+}
+
+.mgr-po-list__more {
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.mgr-po-list__more:hover {
+  background: #f1f5f9;
+}
+
+.mgr-po-list__dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  min-width: 150px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+  padding: 6px;
+  z-index: 5;
+}
+
+.mgr-po-list__menu:focus-within .mgr-po-list__dropdown,
+.mgr-po-list__menu:hover .mgr-po-list__dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.mgr-po-list__dropdown a {
+  padding: 8px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #05101d;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 13px;
+}
+
+.mgr-po-list__dropdown a:hover {
+  background: #f1f5f9;
+}
+
+.mgr-po-list__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+
+.mgr-po-list__results {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.mgr-po-list__pager {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mgr-po-list__page,
+.mgr-po-list__page-btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 13px;
+  color: #334155;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mgr-po-list__page.is-active {
+  background: #05101d;
+  color: #ffffff;
+}
+
+.mgr-po-list__ellipsis {
+  color: #94a3b8;
+  padding: 0 4px;
+}

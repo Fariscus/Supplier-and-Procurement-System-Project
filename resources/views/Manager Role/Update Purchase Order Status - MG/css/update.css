@@ -1,0 +1,189 @@
+/* Update Purchase Order Status - MG (Figma 111:3250) */
+.mgr-content:has(.mgr-po-update) {
+  background: #f8f9fa;
+  padding-top: 8px;
+}
+
+.mgr-po-update {
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mgr-po-update__title {
+  margin: 0 0 8px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #05101d;
+  letter-spacing: -0.64px;
+  line-height: 40px;
+}
+
+.mgr-po-update__dot {
+  color: #75777c;
+}
+
+.mgr-po-update__subtitle {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.mgr-po-update__card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mgr-po-update__row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.mgr-po-update__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mgr-po-update__label {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #334155;
+}
+
+.mgr-po-update__input,
+.mgr-po-update__select {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  color: #05101d;
+  background: #ffffff;
+  outline: none;
+}
+
+.mgr-po-update__input.is-readonly {
+  background: #f8fafc;
+  color: #64748b;
+}
+
+.mgr-po-update__current {
+  height: 44px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.mgr-po-update__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #475569;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.mgr-po-update__pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #94a3b8;
+}
+
+.mgr-po-update__select-wrap {
+  position: relative;
+}
+
+.mgr-po-update__select {
+  appearance: none;
+  padding-right: 40px;
+}
+
+.mgr-po-update__chevron {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.mgr-po-update__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 8px;
+}
+
+.mgr-po-update__cancel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 8px;
+  border: 1px solid #c5c6cc;
+  background: #ffffff;
+  color: #475569;
+  text-decoration: none;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mgr-po-update__submit {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2463eb;
+  color: #ffffff;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mgr-po-update__submit:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 700px) {
+  .mgr-po-update__row {
+    grid-template-columns: 1fr;
+  }
+
+  .mgr-po-update__actions {
+    flex-direction: column-reverse;
+  }
+
+  .mgr-po-update__cancel,
+  .mgr-po-update__submit {
+    width: 100%;
+  }
+}

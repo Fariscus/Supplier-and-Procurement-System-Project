@@ -1,0 +1,222 @@
+/* Purchase Order Detail - MG (Figma 111:2528 + pending/rejected states) */
+.mgr-content:has(.mgr-po-detail) {
+  background: #f8f9fa;
+  padding-top: 8px;
+}
+
+.mgr-po-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1100px;
+}
+
+.mgr-po-detail__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.mgr-po-detail__heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.mgr-po-detail__title {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #05101d;
+  line-height: 40px;
+}
+
+.mgr-po-detail__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.mgr-po-detail__badge--approved {
+  background: #e6f4ea;
+  color: #137333;
+}
+
+.mgr-po-detail__badge--pending {
+  background: #fff4e5;
+  color: #b06000;
+}
+
+.mgr-po-detail__badge--rejected {
+  background: #fce8e6;
+  color: #c5221f;
+}
+
+.mgr-po-detail__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mgr-po-detail__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 8px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mgr-po-detail__btn--outline {
+  background: #ffffff;
+  border: 1px solid #c5c6cc;
+  color: #05101d;
+}
+
+.mgr-po-detail__btn--outline:hover {
+  background: #f8fafc;
+}
+
+.mgr-po-detail__btn--approve {
+  background: #00b074;
+  border: none;
+  color: #ffffff;
+}
+
+.mgr-po-detail__btn--approve:hover {
+  background: #059669;
+}
+
+.mgr-po-detail__alert {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 16px 18px;
+  border-radius: 10px;
+  background: #fce8e6;
+  border: 1px solid #f5c2c0;
+}
+
+.mgr-po-detail__alert-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+}
+
+.mgr-po-detail__alert-title {
+  margin: 0 0 4px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #c5221f;
+}
+
+.mgr-po-detail__alert-text {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #5f2120;
+}
+
+.mgr-po-detail__cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.mgr-po-detail__card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 120px;
+}
+
+.mgr-po-detail__card-label {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.mgr-po-detail__card-value {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #05101d;
+}
+
+.mgr-po-detail__card-sub {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.mgr-po-detail__card-link {
+  margin-top: auto;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 13px;
+  color: #2463eb;
+  text-decoration: none;
+}
+
+.mgr-po-detail__card-link:hover {
+  text-decoration: underline;
+}
+
+.mgr-po-detail__person {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mgr-po-detail__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #dbeafe;
+  color: #1d4ed8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1000px) {
+  .mgr-po-detail__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .mgr-po-detail__cards {
+    grid-template-columns: 1fr;
+  }
+}

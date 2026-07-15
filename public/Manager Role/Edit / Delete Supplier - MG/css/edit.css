@@ -1,0 +1,185 @@
+/* Edit / Delete Supplier - MG (Figma 228:2099) */
+.mgr-content:has(.mgr-supplier-edit) {
+  background: #ffffff;
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
+.mgr-supplier-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+  max-width: 1030px;
+}
+
+.mgr-supplier-edit__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.mgr-supplier-edit__name {
+  margin: 0;
+  padding-bottom: 4px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.64px;
+  color: #05101d;
+}
+
+.mgr-supplier-edit__meta {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #44474c;
+}
+
+.mgr-supplier-edit__dot {
+  padding: 0 8px;
+  color: #c5c6cc;
+}
+
+.mgr-supplier-edit__form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+}
+
+.mgr-supplier-edit__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.mgr-supplier-edit__field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.mgr-supplier-edit__field--full {
+  grid-column: 1 / -1;
+}
+
+.mgr-supplier-edit__label {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #05101d;
+}
+
+.mgr-supplier-edit__input,
+.mgr-supplier-edit__status {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 54px;
+  box-sizing: border-box;
+  padding: 17px;
+  border: 1px solid #c5c6cc;
+  border-radius: 4px;
+  background: #ffffff;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1b1b1d;
+  outline: none;
+}
+
+.mgr-supplier-edit__input::placeholder {
+  color: #6b7280;
+}
+
+.mgr-supplier-edit__input:focus {
+  border-color: #2463eb;
+}
+
+.mgr-supplier-edit__status {
+  gap: 4px;
+}
+
+.mgr-supplier-edit__status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 12px;
+  background: #10b981;
+  flex-shrink: 0;
+}
+
+.mgr-supplier-edit__actions {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+  width: 100%;
+}
+
+.mgr-supplier-edit__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
+  min-height: 69px;
+  padding: 16px 24px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mgr-supplier-edit__btn--save {
+  background: #2463eb;
+  color: #ffffff;
+  border: none;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.mgr-supplier-edit__btn--save:hover {
+  filter: brightness(0.95);
+}
+
+.mgr-supplier-edit__btn--delete {
+  background: #ffffff;
+  color: #ff0000;
+  border: 2px solid #ff0000;
+}
+
+.mgr-supplier-edit__btn--delete:hover {
+  background: #fff5f5;
+}
+
+@media (max-width: 900px) {
+  .mgr-supplier-edit__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mgr-supplier-edit__actions {
+    flex-direction: column;
+  }
+
+  .mgr-supplier-edit__name {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}

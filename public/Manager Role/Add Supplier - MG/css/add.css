@@ -1,0 +1,213 @@
+/* Add Supplier - MG (Figma 9:30) */
+.mgr-content:has(.mgr-add-supplier) {
+  background: #f8f9fa;
+  padding-top: 8px;
+}
+
+.mgr-add-supplier {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1024px;
+}
+
+.mgr-add-supplier__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mgr-add-supplier__title {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #05101d;
+}
+
+.mgr-add-supplier__subtitle {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #44474c;
+}
+
+.mgr-add-supplier__card {
+  background: #ffffff;
+  border: 1px solid #c5c6cc;
+  border-radius: 8px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding: 33px 25px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mgr-add-supplier__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.mgr-add-supplier__label {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #44474c;
+  font-weight: 600;
+}
+
+.mgr-add-supplier__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.mgr-add-supplier__input,
+.mgr-add-supplier__textarea {
+  width: 100%;
+  border: 1px solid #c5c6cc;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #1b1b1d;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.mgr-add-supplier__input {
+  height: 48px;
+  padding: 0 17px;
+}
+
+.mgr-add-supplier__input::placeholder,
+.mgr-add-supplier__textarea::placeholder {
+  color: #6b7280;
+}
+
+.mgr-add-supplier__input-icon {
+  position: relative;
+}
+
+.mgr-add-supplier__input-icon > img {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 17px;
+  height: 15px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.mgr-add-supplier__input-icon .mgr-add-supplier__input {
+  padding-left: 41px;
+}
+
+.mgr-add-supplier__textarea {
+  min-height: 130px;
+  padding: 17px;
+  resize: vertical;
+  line-height: 24px;
+}
+
+.mgr-add-supplier__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 24px;
+  border-top: 1px solid #c5c6cc;
+}
+
+.mgr-add-supplier__note {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #44474c;
+  max-width: 520px;
+}
+
+.mgr-add-supplier__note img {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.mgr-add-supplier__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mgr-add-supplier__cancel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 25px;
+  border-radius: 4px;
+  border: 1px solid #05101d;
+  background: #ffffff;
+  color: #05101d;
+  text-decoration: none;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  box-sizing: border-box;
+}
+
+.mgr-add-supplier__cancel:hover {
+  background: #f8f9fa;
+}
+
+.mgr-add-supplier__submit {
+  appearance: none;
+  border: none;
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 4px;
+  background: #2463eb;
+  color: #ffffff;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.mgr-add-supplier__submit:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 800px) {
+  .mgr-add-supplier__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mgr-add-supplier__footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mgr-add-supplier__actions {
+    flex-direction: column-reverse;
+  }
+
+  .mgr-add-supplier__cancel,
+  .mgr-add-supplier__submit {
+    width: 100%;
+  }
+}

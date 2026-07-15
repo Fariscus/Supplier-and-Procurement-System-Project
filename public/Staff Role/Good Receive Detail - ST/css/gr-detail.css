@@ -1,0 +1,227 @@
+/* Good Receive Detail - ST */
+:root {
+  --grd-heading: #0f172a;
+  --grd-text: #334155;
+  --grd-muted: #64748b;
+  --grd-border: #e2e8f0;
+  --grd-green: #00b074;
+  --grd-green-soft: rgba(0, 176, 116, 0.12);
+  --grd-page: #f8f9fa;
+}
+
+.staff-content:has(.gr-detail) {
+  background: var(--grd-page);
+  padding-top: 8px;
+}
+
+.gr-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1100px;
+}
+
+.gr-detail__top {
+  border-top: 1px solid var(--grd-border);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gr-detail__back-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gr-detail__back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  color: var(--grd-heading);
+  text-decoration: none;
+  border: 1px solid var(--grd-border);
+  background: #ffffff;
+}
+
+.gr-detail__back:hover {
+  background: #f1f5f9;
+}
+
+.gr-detail__back svg {
+  width: 18px;
+  height: 18px;
+}
+
+.gr-detail__ref {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--grd-heading);
+}
+
+.gr-detail__status-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.gr-detail__note-label {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  color: var(--grd-muted);
+}
+
+.gr-detail__badge {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: var(--grd-green-soft);
+  color: var(--grd-green);
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.gr-detail__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.9fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.gr-detail__card {
+  background: #ffffff;
+  border: 1px solid var(--grd-border);
+  border-radius: 12px;
+  padding: 22px 24px;
+}
+
+.gr-detail__card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.gr-detail__card-title {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--grd-heading);
+}
+
+.gr-detail__info-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--grd-muted);
+}
+
+.gr-detail__meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 24px;
+  margin-bottom: 22px;
+}
+
+.gr-detail__meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gr-detail__meta-label {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--grd-muted);
+}
+
+.gr-detail__meta-value {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--grd-heading);
+}
+
+.gr-detail__person {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gr-detail__avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #3b82f6;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.gr-detail__remarks-label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--grd-muted);
+}
+
+.gr-detail__remarks-box {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 1px solid var(--grd-border);
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--grd-text);
+  line-height: 1.55;
+}
+
+.gr-detail__art {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f8fafc;
+  border: 1px solid var(--grd-border);
+}
+
+.gr-detail__art img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .gr-detail__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .gr-detail__meta {
+    grid-template-columns: 1fr;
+  }
+}
